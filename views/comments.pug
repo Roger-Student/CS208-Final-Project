@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	main
+		h1 Customer Comments
+		section
+			h2 Leave a Comment
+			form
+				label(for='name') Name
+				input(type='text' name='name' id='name')
+				label(for='comment') Comment
+				textarea(name='comment' id='comment')
+				button(type='submit') Submit
+		section
+			h2 Recent Comments
+			p No comments yet.

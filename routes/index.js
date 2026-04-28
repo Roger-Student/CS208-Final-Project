@@ -53,4 +53,20 @@ router.post('/delete', function (req, res, next) {
     }
 });
 
+router.get('/landing', function(req, res) {
+	res.render('landing', { title: 'Downtown Donuts' });
+});
+
+router.get('/menu', function(req, res) {
+	res.render('menu', { title: 'Our Menu - Downtown Donuts' });
+});
+
+router.get('/about', function(req, res) {
+	res.render('about', { title: 'About Us - Downtown Donuts' });
+});
+
+router.get('/comments', function(req, res) {
+	res.render('comments', { title: 'Comments - Downtown Donuts' });
+});
+
 module.exports = router;
