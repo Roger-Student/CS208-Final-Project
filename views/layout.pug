@@ -1,7 +1,24 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		a(href='#main-content' class='skip-link') Skip to content
+		header
+			nav(aria-label='Main navigation')
+				a(href='/landing' aria-current=(currentPage === 'landing' ? 'page' : false)) Home
+				a(href='/menu' aria-current=(currentPage === 'menu' ? 'page' : false)) Menu
+				a(href='/about' aria-current=(currentPage === 'about' ? 'page' : false)) About Us
+				a(href='/comments' aria-current=(currentPage === 'comments' ? 'page' : false)) Comments
+		main(id='main-content')
+			block content
+		footer
+			section
+				h3 Downtown Donuts
+			section
+				h3 Order Online
+				a(href='https://www.ubereats.com') Uber Eats
+				a(href='https://www.doordash.com') DoorDash
