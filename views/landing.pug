@@ -1,14 +1,39 @@
 extends layout
 
 block content
-	main
-		section
-			h1 Welcome to Downtown Donuts
-			p Fresh donuts and coffee since 1992.
-		section
-			h2 Our Best Sellers
-			p Coming soon.
-		section
-			h2 Order Online
-			a(href='https://www.ubereats.com') Uber Eats
-			a(href='https://www.doordash.com') DoorDash
+	section.hero
+		.hero-content
+			img(src='/images/logo.png' alt='Downtown Donuts logo' class='hero-logo')
+			h1.hero-heading Downtown Donuts
+			p.hero-subhead Family-Owned Since 1992
+			a(href='/menu' class='btn btn-primary') View Our Menu
+	section.best-sellers
+		h2 Our Best Sellers
+		.grid-cards
+			article.card
+				.card-img-placeholder
+				h3 Creamed Core
+				p Glazed all around the hole
+			article.card
+				.card-img-placeholder
+				h3 Big Brown Eye
+				p Doo doo doo, looking out your backdoor
+			article.card
+				.card-img-placeholder
+				h3 Canada Stick
+				p Thick maple log
+	section.visit
+		h2 Visit Us
+		.visit-content
+			.visit-info
+				p 123 Main Street, Downtown
+				p Open Daily 6AM — 2PM
+				p (555) 867-5309
+			.visit-map
+				.map-placeholder
+	section.order
+		h2 Order Online
+		p Get Downtown Donuts delivered to your door.
+		.order-links
+			a(href='https://www.ubereats.com' class='btn btn-outline') Uber Eats
+			a(href='https://www.doordash.com' class='btn btn-outline') DoorDash
