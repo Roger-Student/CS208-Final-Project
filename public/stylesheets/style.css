@@ -1,8 +1,82 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--color-dark: #10291D;
+	--color-saffron: #F7C64A;
+	--color-seasalt: #F7F7F7;
+	--color-black: #000000;
+	--color-white: #FFFFFF;
+	--color-error: #C62828;
+	--color-success: #2E7D32;
+
+	--font-brand: 'Italianno', cursive;
+	--font-body: 'Montserrat', sans-serif;
+
+	--space-xs: 0.5rem;
+	--space-sm: 1rem;
+	--space-md: 2rem;
+	--space-lg: 4rem;
+	--space-xl: 6rem;
+
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-pill: 50px;
+
+	--shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+	--shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+ul,
+ol {
+	list-style: none;
 }
 
 a {
-  color: #00B7FF;
+	text-decoration: none;
+	color: inherit;
+}
+
+button,
+input,
+textarea {
+	font: inherit;
+}
+
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-body);
+	font-weight: 400;
+	color: var(--color-black);
+	background-color: var(--color-seasalt);
+	line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.2;
+}
+
+.brand-heading {
+	font-family: var(--font-brand);
+	font-size: clamp(3rem, 6vw, 5rem);
 }
