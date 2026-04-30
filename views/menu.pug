@@ -4,67 +4,87 @@ block content
 	section.menu-header
 		h1.menu-brand Downtown Donuts
 		p.menu-tagline Family-Owned Since 1992
+		h2 Order Online
+		.order-links
+			a(href='https://www.ubereats.com' class='btn btn-outline') Uber Eats
+			a(href='https://www.doordash.com' class='btn btn-outline') DoorDash
+			a(href='https://www.grubhub.com' class='btn btn-outline') GrubHub
+
 
 	section.menu-category
 		h2 Signature Donuts
 		p.category-subhead Handcrafted fresh every morning
 		table.menu-table
 			tr
-				td Classic Glazed
-				td Our legendary original – light, fluffy, and perfectly glazed
-				td $2.50
+				td
+					span.item-name Classic Glazed
+					span.item-desc Our legendary original - light, fluffy, and perfectly glazed
+				td.price $2.50
 			tr
-				td Maple Bacon Bar
-				td Rich maple glaze topped with crispy applewood bacon
-				td $3.75
+				td
+					span.item-name Maple Bacon Bar
+					span.item-desc Rich maple glaze topped with crispy applewood bacon
+				td.price $3.75
 			tr
-				td Boston Cream
-				td Bavarian cream filling, dark chocolate ganache topping
-				td $3.50
+				td
+					span.item-name Boston Cream
+					span.item-desc Bavarian cream filling, dark chocolate ganache topping
+				td.price $3.50
 			tr
-				td Blueberry Cake
-				td Dense cake donut bursting with fresh blueberries
-				td $3.25
+				td
+					span.item-name Blueberry Cake
+					span.item-desc Dense cake donut bursting with fresh blueberries
+				td.price $3.25
 			tr
-				td Cinnamon Sugar Twist
-				td Hand-twisted and tossed in cinnamon sugar
-				td $2.75
+				td
+					span.item-name Cinnamon Sugar Twist
+					span.item-desc Hand-twisted and tossed in cinnamon sugar
+				td.price $2.75
 			tr
-				td Strawberry Frosted
-				td Vanilla donut with strawberry glaze and rainbow sprinkles
-				td $3.00
+				td
+					span.item-name Strawberry Frosted
+					span.item-desc Vanilla donut with strawberry glaze and rainbow sprinkles
+				td.price $3.00
 			tr
-				td Chocolate Old Fashioned
-				td Sour cream donut with rich chocolate glaze
-				td $3.25
+				td
+					span.item-name Chocolate Old Fashioned
+					span.item-desc Sour cream donut with rich chocolate glaze
+				td.price $3.25
 			tr
-				td Lemon Poppy Seed
-				td Bright lemon glaze with poppy seed crunch
-				td $3.50
+				td
+					span.item-name Lemon Poppy Seed
+					span.item-desc Bright lemon glaze with poppy seed crunch
+				td.price $3.50
 			tr
-				td Dulce de Leche
-				td Caramel cream filled, drizzled with dulce de leche
-				td $3.75
+				td
+					span.item-name Dulce de Leche
+					span.item-desc Caramel cream filled, drizzled with dulce de leche
+				td.price $3.75
 			tr
-				td PB & J
-				td Peanut butter glaze with raspberry jam filling
-				td $3.75
-
-	section.menu-category
-		h2 Donut Holes
-		p.category-subhead Mix and match flavors!
-		p Glazed, Chocolate, or Cinnamon Sugar
-		p Half Dozen $4.50  |  Dozen $7.99
-
-	section.menu-location
-		p Downtown Donuts  |  123 Main Street, Downtown  |  (555) 867-5309  |  www.downtowndonuts.com
+				td
+					span.item-name PB & J
+					span.item-desc Peanut butter glaze with raspberry jam filling
+				td.price $3.75
+		.menu-box
+			h2 Donut Holes
+			p.item-name Mix and match flavors! 
+			p.item-desc Glazed, Chocolate, or Cinnamon Sugar
+			p Half Dozen <strong>$4.50</strong>  |  Dozen <strong>$7.99</strong>
+	
+		section.order
+		h2 Order Online
+		p Get Downtown Donuts delivered to your door.
+		.order-links
+			a(href='https://www.ubereats.com' class='btn btn-outline') Uber Eats
+			a(href='https://www.doordash.com' class='btn btn-outline') DoorDash
+			a(href='https://www.grubhub.com' class='btn btn-outline') GrubHub
 
 	section.menu-category
 		h2 Drinks & More
 
 		h3 Coffee
 		p.category-subhead Locally roasted beans  •  Always fresh
-		table.menu-table
+		table.menu-table.coffee-table
 			tr
 				th
 				th SM
@@ -76,97 +96,116 @@ block content
 				td $2.75
 				td $3.25
 			tr
-				td(colspan='4') House blend or single origin
+				td(colspan='4')
+					span.item-desc House blend or single origin
 			tr
 				td Cold Brew
 				td $3.50
 				td $4.00
 				td $4.50
 			tr
-				td(colspan='4') Slow-steeped 18 hours, smooth and bold
+				td(colspan='4')
+					span.item-desc Slow-steeped 18 hours, smooth and bold
 			tr
 				td Espresso
 				td $3.00
 				td —
 				td —
 			tr
-				td(colspan='4') Double shot pulled to order
+				td(colspan='4')
+					span.item-desc Double shot pulled to order
 			tr
 				td Americano
 				td $3.25
 				td $3.75
 				td $4.25
 			tr
-				td(colspan='4') Espresso and hot water, classic and clean
+				td(colspan='4')
+					span.item-desc Espresso and hot water, classic and clean
 			tr
 				td Latte
 				td $4.25
 				td $4.75
 				td $5.25
 			tr
-				td(colspan='4') Espresso with steamed milk, choice of milk
+				td(colspan='4')
+					span.item-desc Espresso with steamed milk, choice of milk
 			tr
 				td Cappuccino
 				td $4.25
 				td $4.75
 				td $5.25
 			tr
-				td(colspan='4') Equal parts espresso, steamed milk, foam
+				td(colspan='4')
+					span.item-desc Equal parts espresso, steamed milk, foam
 			tr
 				td Mocha
 				td $4.75
 				td $5.25
 				td $5.75
 			tr
-				td(colspan='4') Espresso, chocolate, steamed milk, whipped cream
+				td(colspan='4')
+					span.item-desc Espresso, chocolate, steamed milk, whipped cream
 			tr
 				td Vanilla Chai Latte
 				td $4.50
 				td $5.00
 				td $5.50
 			tr
-				td(colspan='4') Spiced chai with vanilla and steamed milk
+				td(colspan='4')
+					span.item-desc Spiced chai with vanilla and steamed milk
 
-		section.menu-addons
+		.menu-box
 			h4 Add-Ons
-			p Extra shot +$0.75   |   Flavored syrup +$0.50   |   Oat / Almond / Soy milk +$0.60
-			p Whipped cream +$0.50   |   Cold foam +$0.75
+			p Extra shot <strong>+$0.75</strong>   |   Flavored syrup <strong>+$0.50</strong>   |   Oat / Almond / Soy milk <strong>+$0.60</strong>
+			p Whipped cream <strong>+$0.50</strong>   |   Cold foam <strong>+$0.75</strong>
 
 		h3 Other Drinks
 		table.menu-table
 			tr
 				td Fresh Squeezed OJ
-				td $3.50
+				td.price $3.50
 			tr
 				td Hot Chocolate
-				td $3.75
+				td.price $3.75
 			tr
 				td Iced Tea (Sweet / Unsweet)
-				td $2.50
+				td.price $2.50
 			tr
 				td Lemonade
-				td $2.75
+				td.price $2.75
 			tr
 				td Milk (Whole, Chocolate, Strawberry)
-				td $2.00
+				td.price $2.00
 			tr
 				td Apple Cider (Seasonal)
-				td $3.50
+				td.price $3.50
 
 	section.menu-category
 		h2 Breakfast Bites
 		table.menu-table
 			tr
 				td Egg & Cheese Croissant
-				td $5.50
+				td.price $5.50
 			tr
 				td Bacon Breakfast Sandwich
-				td $6.25
+				td.price $6.25
 			tr
 				td Avocado Toast
-				td $5.75
+				td.price $5.75
 			tr
 				td Yogurt Parfait
-				td $4.50
+				td.price $4.50
 
-		p.menu-catering Catering available!
+		p.menu-catering Catering available! Call (555) 867-5309 or email catering@downtowndonuts.com
+
+	section.menu-location
+		p OPEN DAILY
+		p Mon-Fri 6AM-6PM  |  Sat-Sun 7AM-4PM
+		p.order-links.inline
+			a(href='https://www.ubereats.com') UberEats
+			span  |  
+			a(href='https://www.doordash.com') DoorDash
+			span  |  
+			a(href='https://www.grubhub.com') GrubHub
+		p Downtown Donuts  |  123 Main Street, Downtown  |  (555) 867-5309  |  www.downtowndonuts.com
