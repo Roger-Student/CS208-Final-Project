@@ -465,22 +465,230 @@ footer a:hover {
 	margin-top: var(--space-sm);
 }
 
-.menu-location {
-	text-align: center;
-	font-size: 0.875rem;
-	padding: var(--space-md);
-	background-color: var(--color-dark);
-	color: var(--color-seasalt);
-}
-
-.menu-location .inline {
-	color: var(--color-saffron);
-}
 
 @media (max-width: 767px) {
 	.coffee-table {
 		display: block;
 		overflow-x: auto;
 		white-space: nowrap;
+	}
+}
+
+
+.about-intro {
+	background-color: var(--color-dark);
+	color: var(--color-seasalt);
+	padding: var(--space-xl) var(--space-md);
+	text-align: center;
+}
+
+.about-intro h1 {
+	font-family: var(--font-brand);
+	font-size: clamp(3rem, 6vw, 5rem);
+	color: var(--color-saffron);
+}
+
+.lead {
+	font-size: 1.25rem;
+	margin-top: var(--space-sm);
+}
+
+.about-story {
+	padding: var(--space-lg) var(--space-md);
+	max-width: 960px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-md);
+}
+
+.about-story h2 {
+	font-size: 2rem;
+	margin-bottom: var(--space-sm);
+}
+
+.about-story p {
+	margin-bottom: var(--space-sm);
+}
+
+.img-placeholder {
+	background-color: var(--color-saffron);
+	height: 250px;
+	border-radius: var(--radius-md);
+}
+
+@media (min-width: 768px) {
+	.about-story {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.comments-intro {
+	background-color: var(--color-dark);
+	color: var(--color-seasalt);
+	padding: var(--space-lg) var(--space-md);
+	text-align: center;
+}
+
+.comments-intro h1 {
+	font-family: var(--font-brand);
+	font-size: clamp(3rem, 6vw, 5rem);
+	color: var(--color-saffron);
+}
+
+.comments-intro p {
+	margin-top: var(--space-sm);
+}
+
+.comments-form {
+	padding: var(--space-lg) var(--space-md);
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.comments-form h2 {
+	font-size: 1.75rem;
+	margin-bottom: var(--space-md);
+}
+
+.form-group {
+	margin-bottom: var(--space-sm);
+}
+
+.form-group label {
+	display: block;
+	font-weight: 700;
+	margin-bottom: var(--space-xs);
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: var(--space-xs) var(--space-sm);
+	border: 1px solid #ccc;
+	border-radius: var(--radius-sm);
+	background-color: var(--color-white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+	outline: 2px solid var(--color-saffron);
+	border-color: transparent;
+}
+
+.form-feedback {
+	min-height: 1.5rem;
+	font-size: 0.875rem;
+}
+
+.form-feedback.error {
+	color: var(--color-error);
+}
+
+.form-feedback.success {
+	color: var(--color-success);
+}
+
+.comments-list {
+	padding: var(--space-md);
+	max-width: 600px;
+	margin: 0 auto var(--space-lg);
+}
+
+.comments-list h2 {
+	font-size: 1.75rem;
+	margin-bottom: var(--space-md);
+}
+
+.comments-container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+}
+
+.comment-card {
+	background-color: var(--color-white);
+	border-radius: var(--radius-md);
+	padding: var(--space-sm) var(--space-md);
+	box-shadow: var(--shadow-card);
+}
+
+.comment-meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+	margin-bottom: var(--space-xs);
+}
+
+.comment-name {
+	font-weight: 700;
+}
+
+.comment-time {
+	font-size: 0.75rem;
+	color: #777;
+}
+
+.comment-body {
+	line-height: 1.5;
+}
+
+.comments-empty {
+	text-align: center;
+	color: #777;
+	padding: var(--space-lg);
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--space-sm);
+	margin-top: var(--space-md);
+}
+
+.pagination button {
+	padding: var(--space-xs) var(--space-sm);
+	border: 1px solid var(--color-dark);
+	border-radius: var(--radius-sm);
+	background-color: var(--color-white);
+	cursor: pointer;
+}
+
+.pagination button:hover {
+	background-color: var(--color-dark);
+	color: var(--color-seasalt);
+}
+
+.pagination button:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.pagination span {
+	font-size: 0.875rem;
+}
+
+.spinner {
+	width: 24px;
+	height: 24px;
+	border: 3px solid var(--color-saffron);
+	border-top-color: transparent;
+	border-radius: 50%;
+	animation: spin 0.6s linear infinite;
+	margin: var(--space-md) auto;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (min-width: 768px) {
+	.comments-form,
+	.comments-list {
+		padding: var(--space-lg) var(--space-md);
 	}
 }
