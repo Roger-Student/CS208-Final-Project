@@ -8,6 +8,7 @@ const indexRouter = require('./routes/index');
 const app = express();
 
 var createError = require('http-errors');
+var commentsRouter = require('./routes/comments');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
