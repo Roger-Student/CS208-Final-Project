@@ -1,16 +1,23 @@
 extends layout
 
 block content
-	main
+	section.comments-intro
 		h1 Customer Comments
-		section
-			h2 Leave a Comment
-			form
+		p Share your donut experience below.
+	section.comments-form
+		h2 Leave a Comment
+		form(id='comment-form' novalidate)
+			.form-group
 				label(for='name') Name
-				input(type='text' name='name' id='name')
+				input(type='text' name='name' id='name' maxlength='100' required)
+			.form-group
 				label(for='comment') Comment
-				textarea(name='comment' id='comment')
-				button(type='submit') Submit
-		section
-			h2 Recent Comments
-			p No comments yet.
+				textarea(name='comment' id='comment' maxlength='1000' rows='4' required)
+			.form-feedback(aria-live='polite')
+			button(type='submit' class='btn btn-primary') Submit
+	section.comments-list
+		h2 Recent Comments
+		.comments-container(aria-live='polite')
+			p.comments-empty Be the first to leave a comment.
+		nav.pagination(aria-label='Comments pagination')
+	script(src='/javascripts/comments.js')

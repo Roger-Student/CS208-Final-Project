@@ -34,6 +34,7 @@ router.post('/', validateComment, function(req, res) {
 
 router.get('/', function(req, res) {
 	var comments = readComments();
+	console.log('POST received:', req.body);
 
 	var page = parseInt(req.query.page, 10) || 1;
 	var limit = parseInt(req.query.limit, 10) || 10;

@@ -531,7 +531,7 @@ footer a:hover {
 }
 
 .comments-intro h1 {
-	font-family: var(--font-brand);
+	font-family: var(--font-body);
 	font-size: clamp(3rem, 6vw, 5rem);
 	color: var(--color-saffron);
 }
