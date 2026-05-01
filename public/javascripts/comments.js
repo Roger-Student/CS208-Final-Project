@@ -24,6 +24,13 @@
 			})
 			.catch(function() {
 				container.innerHTML = '<p class="comments-empty">Unable to load comments. Please try again later.</p>';
+				var retry = document.createElement('button');
+				retry.textContent = 'Retry';
+				retry.className = 'btn btn-outline';
+				retry.addEventListener('click', function() {
+					loadComments(currentPage);
+				});
+				container.appendChild(retry);
 			});
 	}
 
