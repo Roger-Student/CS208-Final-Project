@@ -76,9 +76,26 @@ h4 {
 	line-height: 1.2;
 }
 
-.brand-heading {
-	font-family: var(--font-brand);
+
+.page-intro {
+	background-color: var(--color-dark);
+	color: var(--color-seasalt);
+	padding: var(--space-xl) var(--space-md);
+	text-align: center;
+}
+
+.page-intro h1 {
+	font-family: var(--font-body);
 	font-size: clamp(3rem, 6vw, 5rem);
+	color: var(--color-saffron);
+}
+
+
+.page-break {
+	background-color: var(--color-dark);
+	color: var(--color-seasalt);
+	padding: var(--space-lg) var(--space-md);
+	text-align: center;
 }
 
 .skip-link {
@@ -267,51 +284,6 @@ footer a:hover {
 	color: #555;
 }
 
-.visit {
-	padding: var(--space-lg) var(--space-md);
-	background-color: var(--color-dark);
-	color: var(--color-seasalt);
-	text-align: center;
-}
-
-.visit h2 {
-	font-size: 2rem;
-	margin-bottom: var(--space-md);
-}
-
-.visit-content {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: var(--space-md);
-	max-width: 800px;
-	margin: 0 auto;
-}
-
-.visit-info {
-	line-height: 2;
-}
-
-.map-placeholder {
-	background-color: var(--color-saffron);
-	height: 200px;
-	border-radius: var(--radius-md);
-}
-
-/* Order */
-.order {
-	padding: var(--space-lg) var(--space-md);
-	text-align: center;
-}
-
-.order h2 {
-	font-size: 2rem;
-	margin-bottom: var(--space-xs);
-}
-
-.order p {
-	margin-bottom: var(--space-md);
-}
-
 .order-links {
 	display: flex;
 	justify-content: center;
@@ -473,26 +445,6 @@ footer a:hover {
 		white-space: nowrap;
 	}
 }
-
-
-.about-intro {
-	background-color: var(--color-dark);
-	color: var(--color-seasalt);
-	padding: var(--space-xl) var(--space-md);
-	text-align: center;
-}
-
-.about-intro h1 {
-	font-family: var(--font-brand);
-	font-size: clamp(3rem, 6vw, 5rem);
-	color: var(--color-saffron);
-}
-
-.lead {
-	font-size: 1.25rem;
-	margin-top: var(--space-sm);
-}
-
 .about-story {
 	padding: var(--space-lg) var(--space-md);
 	max-width: 960px;
@@ -500,14 +452,15 @@ footer a:hover {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: var(--space-md);
+	align-items: start;
 }
 
-.about-story h2 {
+.story-text h2 {
 	font-size: 2rem;
 	margin-bottom: var(--space-sm);
 }
 
-.about-story p {
+.story-text p {
 	margin-bottom: var(--space-sm);
 }
 
@@ -523,12 +476,29 @@ footer a:hover {
 	}
 }
 
+.story-figure {
+	margin: 0;
+}
+
+.story-caption {
+	font-weight: 700;
+	font-size: 0.75rem;
+	margin-top: var(--space-xs);
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.story-caption {
+		text-align: left;
+	}
+}
 .comments-intro {
 	background-color: var(--color-dark);
 	color: var(--color-seasalt);
 	padding: var(--space-lg) var(--space-md);
 	text-align: center;
 }
+
 
 .comments-intro h1 {
 	font-family: var(--font-body);
