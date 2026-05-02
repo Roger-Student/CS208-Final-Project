@@ -1,7 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-
+/* redirects to landing initially */
+router.get('/', function(req, res) {
+	res.redirect('/landing');
+});
 
 router.get('/landing', function(req, res) {
 	res.render('landing', { title: 'Downtown Donuts', currentPage: 'landing' });
