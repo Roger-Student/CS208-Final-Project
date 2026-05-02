@@ -109,7 +109,8 @@
 		if (diff < 604800) return Math.floor(diff / 86400) + ' days ago';
 		return then.toLocaleDateString();
 	}
-
+	
+	// validate, disable button, send fetch, handle response
 	form.addEventListener('submit', function(e) {
 		e.preventDefault();
 
