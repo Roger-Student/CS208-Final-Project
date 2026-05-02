@@ -6,11 +6,14 @@
 	var pagination = document.querySelector('.pagination');
 	var currentPage = 1;
 
-	function loadComments(page) {
+		function loadComments(page, retries) {
 		currentPage = page;
 		container.innerHTML = '<div class="spinner"></div>';
 		pagination.innerHTML = '';
 		container.setAttribute('aria-busy', 'true');
+		
+		/* a begruding necessity accounting for codespace's port forwarding delay */
+		retries = retries || 0;
 
 		fetch('/api/comments?page=' + page + '&limit=10')
 			.then(function(response) {
@@ -24,6 +27,12 @@
 				renderPagination(data.page, data.totalPages);
 			})
 			.catch(function() {
+				if (retries < 3) {
+					setTimeout(function() {
+						loadComments(page, retries + 1);
+					}, 2000);
+					return;
+				}
 				container.innerHTML = '<p class="comments-empty">Unable to load comments. Please try again later.</p>';
 				var retry = document.createElement('button');
 				retry.textContent = 'Retry';
@@ -175,5 +184,7 @@
 		feedback.className = 'form-feedback';
 	}
 
-	loadComments(1);
+	setTimeout(function() {
+		loadComments(1);
+	}, 500);
 })();

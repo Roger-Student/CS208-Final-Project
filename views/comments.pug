@@ -9,10 +9,10 @@ block content
 		form(id='comment-form' novalidate)
 			.form-group
 				label(for='name') Name
-				input(type='text' name='name' id='name' maxlength='100' required)
+				input(type='text' name='name' id='name' maxlength='100' required autocomplete='name')
 			.form-group
 				label(for='comment') Comment
-				textarea(name='comment' id='comment' maxlength='1000' rows='4' required)
+				textarea(name='comment' id='comment' maxlength='1000' rows='4' required autocomplete='off')
 			.form-feedback(aria-live='polite')
 			button(type='submit' class='btn btn-primary') Submit
 	section.comments-list
