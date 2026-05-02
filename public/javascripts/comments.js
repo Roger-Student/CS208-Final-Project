@@ -10,8 +10,9 @@
 		currentPage = page;
 		container.innerHTML = '<div class="spinner"></div>';
 		pagination.innerHTML = '';
+		container.setAttribute('aria-busy', 'true');
 
-		fetch('/api/comments?page=' + page + '&limit=5')
+		fetch('/api/comments?page=' + page + '&limit=10')
 			.then(function(response) {
 				if (!response.ok) {
 					throw new Error('Unable to load comments.');
@@ -31,6 +32,9 @@
 					loadComments(currentPage);
 				});
 				container.appendChild(retry);
+			})
+			.finally(function() {
+				container.removeAttribute('aria-busy');
 			});
 	}
 

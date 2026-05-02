@@ -76,7 +76,6 @@ h4 {
 	line-height: 1.2;
 }
 
-
 .page-intro {
 	background-color: var(--color-dark);
 	color: var(--color-seasalt);
@@ -98,6 +97,8 @@ h4 {
 	text-align: center;
 }
 
+
+/* Site Navigation */
 header {
 	background-color: var(--color-dark);
 	color: var(--color-seasalt);
@@ -145,6 +146,30 @@ footer {
 	footer {
 		grid-template-columns: repeat(3, 1fr);
 		text-align: center;
+	}
+}
+/* Accessibility */
+.skip-link {
+	position: absolute;
+	top: -100%;
+	left: var(--space-sm);
+	padding: var(--space-xs) var(--space-sm);
+	background-color: var(--color-dark);
+	color: var(--color-seasalt);
+	z-index: 100;
+}
+
+.skip-link:focus {
+	top: var(--space-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
 	}
 }
 
@@ -287,6 +312,11 @@ a.card {
 .card p {
 	font-size: 0.875rem;
 	color: #555;
+}
+
+a.card:focus-visible {
+	outline: 2px solid var(--color-saffron);
+	outline-offset: 2px;
 }
 
 .order-links {

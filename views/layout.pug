@@ -6,6 +6,7 @@ html(lang='en')
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
+		a(href='#main-content' class='skip-link') Skip to content
 		header
 			nav(aria-label='Main navigation')
 				a(href='/landing' aria-current=(currentPage === 'landing' ? 'page' : false)) Home
@@ -19,3 +20,12 @@ html(lang='en')
 			block content
 		footer
 			p Downtown Donuts  |  123 Main Street, Downtown  |  (555) 867-5309  |  www.downtowndonuts.com
+			a(href='#') Back to top
+			span  |  
+			a(href='/landing' aria-current=(currentPage === 'landing' ? 'page' : false)) Home
+			span  |  
+			a(href='/menu' aria-current=(currentPage === 'menu' ? 'page' : false)) Menu
+			span  |  
+			a(href='/about' aria-current=(currentPage === 'about' ? 'page' : false)) About Us
+			span  |  
+			a(href='/comments' aria-current=(currentPage === 'comments' ? 'page' : false)) Comments
